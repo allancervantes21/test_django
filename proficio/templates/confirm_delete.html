@@ -1,0 +1,8 @@
+<h1>Certeza que quer excluir?</h1>
+
+<p>{{ item.name }}</p>
+
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">Excluir</button>
+</form>

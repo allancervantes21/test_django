@@ -1,0 +1,11 @@
+<h1>Lista</h1>
+
+<ul>
+    {% for item in items %}
+        <li><a href="{% url 'item_detail' item.pk %}">{{ item.name }}</a></li>
+    {% empty %}
+        <li>Nada</li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'item_create' %}">Criar item</a>
